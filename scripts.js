@@ -12,6 +12,7 @@ window.addEventListener("load", function() {
     let spaceShuttleHeight = document.getElementById("spaceShuttleHeight");
     let landButton = document.getElementById("landing");
     let abortMission = document.getElementById("missionAbort");
+    let newSpaceHeight;
 
     // 2. When the "Take off" button is clicked, the following should happen:
     takeOffButton.addEventListener("click", function(event) {
@@ -25,11 +26,13 @@ window.addEventListener("load", function() {
             // 2.C The background color of the shuttle flight screen (id = "shuttleBackground") should change from green to blue.
             shuttleBackground.style.backgroundColor = "blue";
             // 2.D The shuttle height should increase by 10,000 miles.
-            window.console.log("typeof spaceShuttleHeight.innerHTML");
-            window.console.log(typeof spaceShuttleHeight.innerHTML);
-            window.console.log("Number(spaceShuttleHeight.innerHTML) + Number(10000)");
-            window.console.log(Number(spaceShuttleHeight.innerHTML) + Number(10000));
-            spaceShuttleHeight.innerHTML = (Number(spaceShuttleHeight.innerHTML) + Number(10000)).toString();
+            // window.console.log("typeof spaceShuttleHeight.innerHTML");
+            // window.console.log(typeof spaceShuttleHeight.innerHTML);
+            // window.console.log("Number(spaceShuttleHeight.innerHTML) + Number(10000)");
+            // window.console.log(Number(spaceShuttleHeight.innerHTML) + Number(10000));
+            console.log("spaceShuttleHeight.innerHTML", spaceShuttleHeight.innerHTML);
+            newSpaceHeight = Number(spaceShuttleHeight.innerHTML) + 10000;
+            spaceShuttleHeight.innerHTML = newSpaceHeight.toString();
         }
         // 3. When the "Land" button is clicked, the following should happen:
         landButton.addEventListener("click", function(event) {
