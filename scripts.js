@@ -15,11 +15,11 @@ window.addEventListener("load", function() {
 
     // 2. When the "Take off" button is clicked, the following should happen:
     takeOffButton.addEventListener("click", function(event) {
-        windowconsole.log("Take Off Button clicked");
+        window.console.log("Take Off Button clicked");
         // 2.A window confirm should let the user know "Confirm that the shuttle is ready for takeoff." If the shuttle is ready for liftoff, then add parts b-d.
         let confirmReadyForTakeOff = window.confirm("Confirm that the shuttle is ready for takeoff.");
         if (confirmReadyForTakeOff) {
-            windowconsole.log("Confirmed: Ready for Takeoff");
+            window.console.log("Confirmed: Ready for Takeoff");
             // 2.B The flight status should change to "Shuttle in flight."
             flightStatus.innerHTML = "Shuttle in flight.";
             // 2.C The background color of the shuttle flight screen (id = "shuttleBackground") should change from green to blue.
