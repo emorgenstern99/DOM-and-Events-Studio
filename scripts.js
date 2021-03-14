@@ -9,6 +9,7 @@ window.addEventListener("Load", function() {
     let shuttleBackground = document.getElementById("shuttleBackground");
     let spaceShuttleHeight = document.getElementById("spaceShuttleHeight");
     let landButton = document.getElementById("landing");
+    let abortMission = document.getElementById("missionAbort");
 
     // 2. When the "Take off" button is clicked, the following should happen:
     takeOffButton.addEventListener("click", function(event) {
@@ -33,6 +34,25 @@ window.addEventListener("Load", function() {
             // 3.D The shuttle height should go down to 0.
             spaceShuttleHeight.innerHTML = 0;
         });
+
+        // 4. When the "Abort Mission" button is clicked, the following should happen:
+        abortMission.addEventListener("click", function(event) {
+            // 4.A A window confirm should let the user know "Confirm that you want to abort the mission." If the user wants to abort the mission, then add parts b-d.
+            let abortConfirmed = window.confirm("Confirm that you want to abort the mission.");
+            if (abortConfirmed) {
+                // 4.B The flight status should change to "Mission aborted."
+                flightStatus.innerHTML = "Mission aborted";
+                // 4.C The background color of the shuttle flight screen should change from blue to green.
+                shuttleBackground.style.backgroundColor = "green";
+                // 4.D The shuttle height should go to 0.
+                spaceShuttleHeight.innerHTML = 0;
+            }
+            // 5. When the "Up", "Down", "Right", and "Left" buttons are clicked, the following should happen:
+            // 5.A The rocket image should move 10 px in the direction of the button that was clicked.
+            // 5.B If the "Up" or "Down" buttons were clicked, then the shuttle height should increase or decrease by 10,000 miles
+        });
+        
+        
         
     });
 });
