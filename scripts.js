@@ -3,7 +3,7 @@
 
 // 1. Use the window load event to ensure all elements have loaded before attaching event handlers.
 window.addEventListener("load", function() {
-    console.log("Window loaded");
+    window.console.log("Window loaded");
     
     // Document elements
     let takeOffButton = document.getElementById("takeoff");
@@ -15,11 +15,11 @@ window.addEventListener("load", function() {
 
     // 2. When the "Take off" button is clicked, the following should happen:
     takeOffButton.addEventListener("click", function(event) {
-        console.log("Take Off Button clicked");
+        windowconsole.log("Take Off Button clicked");
         // 2.A window confirm should let the user know "Confirm that the shuttle is ready for takeoff." If the shuttle is ready for liftoff, then add parts b-d.
         let confirmReadyForTakeOff = window.confirm("Confirm that the shuttle is ready for takeoff.");
         if (confirmReadyForTakeOff) {
-            console.log("Confirmed: Ready for Takeoff");
+            windowconsole.log("Confirmed: Ready for Takeoff");
             // 2.B The flight status should change to "Shuttle in flight."
             flightStatus.innerHTML = "Shuttle in flight.";
             // 2.C The background color of the shuttle flight screen (id = "shuttleBackground") should change from green to blue.
@@ -29,7 +29,7 @@ window.addEventListener("load", function() {
         }
         // 3. When the "Land" button is clicked, the following should happen:
         landButton.addEventListener("click", function(event) {
-            console.log("Land button clicked");
+            window.console.log("Land button clicked");
             // 3.A A window alert should let the user know "The shuttle is landing. Landing gear engaged."
             window.alert("The shuttle is landing. Landing gear engaged.");
             // 3.B The flight status should change to "The shuttle has landed."
@@ -42,7 +42,7 @@ window.addEventListener("load", function() {
 
         // 4. When the "Abort Mission" button is clicked, the following should happen:
         abortMission.addEventListener("click", function(event) {
-            console.log("Abort button clicked");
+            window.console.log("Abort button clicked");
             // 4.A A window confirm should let the user know "Confirm that you want to abort the mission." If the user wants to abort the mission, then add parts b-d.
             let abortConfirmed = window.confirm("Confirm that you want to abort the mission.");
             if (abortConfirmed) {
