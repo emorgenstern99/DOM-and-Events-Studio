@@ -25,6 +25,10 @@ window.addEventListener("load", function() {
             // 2.C The background color of the shuttle flight screen (id = "shuttleBackground") should change from green to blue.
             shuttleBackground.style.backgroundColor = "blue";
             // 2.D The shuttle height should increase by 10,000 miles.
+            window.console.log("typeof spaceShuttleHeight.innerHTML");
+            window.console.log(typeof spaceShuttleHeight.innerHTML);
+            window.console.log("Number(spaceShuttleHeight.innerHTML) + Number(10000)");
+            window.console.log(Number(spaceShuttleHeight.innerHTML) + Number(10000));
             spaceShuttleHeight.innerHTML = (Number(spaceShuttleHeight.innerHTML) + Number(10000)).toString();
         }
         // 3. When the "Land" button is clicked, the following should happen:
