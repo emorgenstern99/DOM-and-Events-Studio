@@ -13,6 +13,15 @@ window.addEventListener("load", function() {
     let landButton = document.getElementById("landing");
     let abortMission = document.getElementById("missionAbort");
     let newSpaceHeight;
+    let rocketImage = document.getElementById("rocket");
+    let up = document.getElementById("up");
+    let right = document.getElementById("right");
+    let down = document.getElementById("down");
+    let left = document.getElementById("left");
+    let marginBottom;
+    let marginLeft;
+    let marginBottom;
+    let marginBottom;
 
     // 2. When the "Take off" button is clicked, the following should happen:
     takeOffButton.addEventListener("click", function(event) {
@@ -60,11 +69,20 @@ window.addEventListener("load", function() {
                 // 4.D The shuttle height should go to 0.
                 spaceShuttleHeight.innerHTML = 0;
             }
-            // 5. When the "Up", "Down", "Right", and "Left" buttons are clicked, the following should happen:
-            // 5.A The rocket image should move 10 px in the direction of the button that was clicked.
-            // 5.B If the "Up" or "Down" buttons were clicked, then the shuttle height should increase or decrease by 10,000 miles
-        });
         
+
+        });
+        // 5. When the "Up", "Down", "Right", and "Left" buttons are clicked, the following should happen:
+        // 5.A The rocket image should move 10 px in the direction of the button that was clicked.
+        // 5.B If the "Up" or "Down" buttons were clicked, then the shuttle height should increase or decrease by 10,000 miles
+        up.addEventListener("click", function(event) {
+            newSpaceHeight = Number(spaceShuttleHeight.innerHTML) + 10000;
+            spaceShuttleHeight.innerHTML = newSpaceHeight.toString(); 
+        });
+        down.addEventListener("click", function(event) {
+            newSpaceHeight = Number(spaceShuttleHeight.innerHTML) - 10000;
+            spaceShuttleHeight.innerHTML = newSpaceHeight.toString(); 
+        });
         
         
     });
