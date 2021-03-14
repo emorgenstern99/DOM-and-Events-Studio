@@ -2,7 +2,7 @@
 // Remember to pay attention to page loading!
 
 // 1. Use the window load event to ensure all elements have loaded before attaching event handlers.
-window.addEventListener("Load", function() {
+window.addEventListener("load", function() {
     // Document elements
     let takeOffButton = document.getElementById("takeoff");
     let flightStatus = document.getElementById("flightStatus");
